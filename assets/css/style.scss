@@ -4,8 +4,8 @@
   box-sizing: border-box;
   transition: .7s ease;
 }
- html{  overflow: hidden;
- }
+ html{overflow: hidden;}
+
 .watch{
   min-width: 100vw;
   min-height: 100vh;
@@ -24,9 +24,18 @@
 
 .dezena{
   margin-left: 75px;
+
+  &:first-child{margin-left: 0;}
 }
 .unidade{
-  margin:0 40px;
+  margin-left: 40px;
+}
+
+p{
+  align-self: flex-start;
+  font-size: 3rem;
+  margin: 0px 40px;
+  color: #1a1a1a;
 }
 
 .dezena, .unidade{
@@ -38,6 +47,7 @@
   justify-content: space-between;
   background-color: #2a2a2a;
   border-radius: 4px;
+
   span{
     padding: 20px 26px;
     color: white;

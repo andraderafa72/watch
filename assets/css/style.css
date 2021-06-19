@@ -43,8 +43,20 @@ html {
   margin-left: 75px;
 }
 
+.dezena:first-child {
+  margin-left: 0;
+}
+
 .unidade {
-  margin: 0 40px;
+  margin-left: 40px;
+}
+
+p {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 3rem;
+  margin: 0px 40px;
+  color: #1a1a1a;
 }
 
 .dezena, .unidade {
