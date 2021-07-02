@@ -21,9 +21,10 @@ setInterval(() => {
   let minutes = `${new Date().getMinutes()}`;
   let seconds = `${new Date().getSeconds()}`;
 
-  if(seconds.length === 1) seconds = `0${seconds}`;
-  if(minutes.length === 1) minutes = `0${minutes}`;
-  if(hours.length === 1) minutes = `0${minutes}`;
+  console.log(hours, minutes, seconds)
+  seconds = seconds.padStart(2, '0')
+  minutes = minutes.padStart(2, '0')
+  hours = hours.padStart(2, '0')
 
   // SEGUNDOS
   for (let i = 0; i < 10; i++) {
@@ -34,7 +35,6 @@ setInterval(() => {
       })
 
       unitSeconds[i].classList.add('selected')
-      console.log(divUnitSeconds)
       divUnitSeconds.style.transform = `translate3d(0, -${transformSize * i}px, 0)`;
     }
   }
@@ -65,7 +65,6 @@ setInterval(() => {
   }
   for (let i = 0; i < 10; i++) {
     if(minutes[0] === `${i}`){
-
       dezenMinutes.forEach((el, index) => {
         el.classList.remove('selected')
       })
@@ -83,11 +82,13 @@ setInterval(() => {
         el.classList.remove('selected')
       })
 
+      console.log(hours, i)
+
       unitHours[i].classList.add('selected')
       divUnitHours.style.transform = `translate3d(0, -${transformSize * i}px, 0)`;
     }
   }
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 3; i++) {
     if(hours[0] === `${i}`){
 
       dezenHours.forEach((el, index) => {
